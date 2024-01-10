@@ -17,7 +17,7 @@ cd restaurant-reviews
  
 - Run the script:
 
-python restaurant_reviews.py
+python restaurant_script.py
 The script demonstrates the usage of the implemented classes with sample data. It creates an SQLite database in memory, adds restaurants, customers, and reviews, and performs various queries and operations.
 
 ## Classes
