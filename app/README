@@ -1,0 +1,82 @@
+# SQLAlchemy Restaurant Reviews
+
+This repository contains a simple implementation of a restaurant review system using SQLAlchemy. The code defines three classes: Restaurant, Customer, and Review. It allows you to create and manage restaurants, customers, and reviews, as well as perform various operations related to them.
+
+# Requirements
+
+Make sure you have Python installed, and install the required packages using:
+
+
+pip install sqlalchemy
+# Usage
+
+- Clone the repository:
+
+git clone https://github.com/your-username/restaurant-reviews.git
+cd restaurant-reviews
+ 
+- Run the script:
+
+python restaurant_reviews.py
+The script demonstrates the usage of the implemented classes with sample data. It creates an SQLite database in memory, adds restaurants, customers, and reviews, and performs various queries and operations.
+
+## Classes
+
+1. Restaurant
+
+Attributes:
+
+id: Primary key.
+name: Name of the restaurant.
+price: Price level.
+reviews: Relationship with reviews.
+Methods:
+
+fanciest(cls, session): Returns information about the fanciest restaurant.
+all_reviews(): Returns a list of all reviews for the restaurant.
+customers(): Returns a list of customers who reviewed the restaurant.
+restaurant_reviews(): Returns all reviews for the restaurant.
+
+2. Customer
+
+Attributes:
+
+id: Primary key.
+first_name: First name of the customer.
+last_name: Last name of the customer.
+reviews: Relationship with reviews.
+Methods:
+
+full_name(): Returns the full name of the customer.
+favorite_restaurant(): Returns the favorite restaurant of the customer.
+add_review(restaurant, rating): Adds a review for a restaurant.
+delete_reviews(restaurant, session): Deletes all reviews for a specific restaurant.
+customer_reviews(): Returns all reviews by the customer.
+reviewed_restaurants(): Returns a list of restaurants reviewed by the customer.
+
+3. Review
+Attributes:
+
+id: Primary key.
+star_rating: Rating given in the review.
+restaurant_id: Foreign key referencing the restaurant.
+customer_id: Foreign key referencing the customer.
+Methods:
+
+full_review(): Returns a formatted string of the review details.
+
+## Sample Data
+
+The script creates sample instances of Restaurant, Customer, and Review classes and adds them to an SQLite in-memory database. It then demonstrates various queries and operations on the data.
+
+Feel free to modify the script or use the classes in your project as needed.
+
+# License for [RESTAURANT REVIEW]
+
+© [2023] [MueniShikuku]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this documentation and associated files (the "Documentation"), to deal in the Documentation without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Documentation, and to permit persons to whom the Documentation is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Documentation.
+
+THE DOCUMENTATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE DOCUMENTATION OR THE USE OR OTHER DEALINGS IN THE DOCUMENTATION.
